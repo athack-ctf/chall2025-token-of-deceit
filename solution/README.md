@@ -1,6 +1,6 @@
 **HOW TO SOLVE: TOKEN OF DECEIT**
 
-1. Sign up\n
+1. Sign up/n
   •	Create an account to be automatically assigned the "user" role.
 
 2. Login
