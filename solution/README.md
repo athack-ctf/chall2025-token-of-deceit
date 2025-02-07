@@ -1,17 +1,21 @@
 **HOW TO SOLVE: TOKEN OF DECEIT**
 
 1. Sign up
+   
   •	Create an account to be automatically assigned the "user" role.
 
 2. Login
+
   •	After account creation, you’ll be redirected to the login page.
   •	Use the same credentials to log in.
   •	Upon successful login, the server generates and sends a JWT.
 
 3. Decode the JWT without verifying the signature
+   
   a. Open the console:
     •	On MacOS, press (Option + Command + J).
     •	On Windows, press (Ctrl + Shift + J).
+    
   b. You’ll see the following message: **GET http://localhost:3000/admin 403 (Forbidden)**
   c. Run the following command in the console to get the token:
 
@@ -56,8 +60,8 @@ b. Using the Browser Console:
     .catch(error => console.error("Error:", error));
 
 6. Access the Admin Endpoint and Retrieve the Flag
-a. The server will decode the manipulated token and grant admin access.
-b. The server will respond with the flag:
+  a. The server will decode the manipulated token and grant admin access.
+  b. The server will respond with the flag:
 
    {"flag":"ATHACKCTF{trust_is_a_vulnerability}"}
 
