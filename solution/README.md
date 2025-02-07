@@ -19,7 +19,7 @@
   b. You’ll see the following message: **GET http://localhost:3000/admin 403 (Forbidden)**
   c. Run the following command in the console to get the token, containing three parts, each separated by a period (.):
 
-     **localStorage.getItem('token');**
+     localStorage.getItem('token');
    
   d. The token role will be "user" as per your credentials.
   e. Visit jwt.io and paste the JWT into the "Encoded" field to view the decoded payload.
