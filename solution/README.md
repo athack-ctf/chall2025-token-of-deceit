@@ -7,10 +7,12 @@
 2. Login
 
      •	After account creation, you’ll be redirected to the login page.
+   
      •	Use the same credentials to log in.
+   
      •	Upon successful login, the server generates and sends a JWT.
 
-3. Decode the JWT without verifying the signature
+4. Decode the JWT without verifying the signature
    
      a. Open the console:
        •	On MacOS, press (Option + Command + J).
@@ -24,7 +26,7 @@
      d. The token role will be "user" as per your credentials.
      e. Visit jwt.io and paste the JWT into the "Encoded" field to view the decoded payload.
 
-4. Manipulate the JWT Payload
+5. Manipulate the JWT Payload
      a. Change the role to "admin".
    
        For example:
@@ -37,7 +39,7 @@
      b. No need to re-sign the token, as the program has a vulnerability that does not verify the signature.
      c. Your JWT is now modified.
 
-5. Send the Manipulated JWT to the Server (2 ways)
+6. Send the Manipulated JWT to the Server (2 ways)
    You can use one of the following methods to send the modified JWT to the server:
    
    a. Using cURL (command line):
@@ -58,7 +60,7 @@
        .then(data => console.log(data))
        .catch(error => console.error("Error:", error));
 
-6. Access the Admin Endpoint and Retrieve the Flag
+7. Access the Admin Endpoint and Retrieve the Flag
      a. The server will decode the manipulated token and grant admin access.
      b. The server will respond with the flag:
    
