@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #f48734, rgb(163, 231, 163));
+            margin: 0;
+            }
+        signup-container {
+            background: black;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: solid white;
+            }
+        .signup-container h2 {
+            margin-bottom: 10px;
+            text-align: center;
+            color: rgb(157, 34, 157);
+            font-size: 15vh;
+            font-weight: bolder;
+            }
+        .signup-container input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            }
+        .signup-container button {
+            width: fit-content;
+            padding: 10px;
+            background-color: rgb(157, 34, 157);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            }
+        .signup-container button:hover {
+            background-color: rgb(106, 20, 106);
+        }
+    </style> 
+</head>
+<body>
+    <div class="signup-container">
+        <h2>SIGN UP</h2>
+        <form id="signup-form">
+            <input type="text" id="signup-username" placeholder="Username" required><br>
+            <input type="password" id="signup-password" placeholder="Password" required><br>
+            <button type="submit">Sign Up</button><br>
+        </form>
+    </div>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+    
+        const username = document.getElementById('signup-username').value;
+        const password = document.getElementById('signup-password').value;
+    
+        try {
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+    
+            const data = await response.json();
+            
+            if (response.ok) {
+                alert(data.message);
+                window.location.href = '/'; // Redirect to login
+            } else {
+                alert('Error: ' + data.message);
+            }
+        } catch (error) {
+            console.error('Signup error:', error);
+            alert('An error occurred. Please try again.');
+        }
+    });
+    </script>    
+</body>
+</html>
