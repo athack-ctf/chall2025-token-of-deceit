@@ -34,6 +34,7 @@
      a. Change the role to "admin".
    
        For example:
+   
        {
          "username": "isabella",
          **"role": "admin",**
@@ -45,7 +46,7 @@
    
      c. Your JWT is now modified.
 
-5. Send the Manipulated JWT to the Server (2 ways)
+6. Send the Manipulated JWT to the Server (2 ways)
    
    You can use one of the following methods to send the modified JWT to the server:
    
@@ -69,7 +70,7 @@
        .then(data => console.log(data))
        .catch(error => console.error("Error:", error));
 
-6. Access the Admin Endpoint and Retrieve the Flag
+7. Access the Admin Endpoint and Retrieve the Flag
     
      a. The server will decode the manipulated token and grant admin access.
     
