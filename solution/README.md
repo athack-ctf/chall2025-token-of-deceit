@@ -57,7 +57,9 @@ b. Using the Browser Console:
 
 6. Access the Admin Endpoint and Retrieve the Flag
 a. The server will decode the manipulated token and grant admin access.
-b. The server will respond with the flag: {"flag":"ATHACKCTF{trust_is_a_vulnerability}"}
+b. The server will respond with the flag:
+
+   {"flag":"ATHACKCTF{trust_is_a_vulnerability}"}
 
 **Vulnerability:**
 •	CVE-2022-23529 (jsonwebtoken <=8.5.1): The server fails to verify the JWT's signature, allowing the payload to be manipulated without detection.
