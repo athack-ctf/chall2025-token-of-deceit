@@ -1,1 +1,1 @@
-Jester’s defenses are in place, but are they truly unbreakable? Can you figure out how to bypass the system’s defenses and access the restricted resources? The path is through a single token, but only the cleverest will succeed.
+Jester’s defenses are in place, but are they truly unbreakable? Can you figure out how to bypass the system’s defenses and access the restricted resource? The path is through a single token, but only the cleverest will succeed.
