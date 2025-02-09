@@ -1,10 +1,12 @@
-#########################################################################################################################
-# TODO: REPLACE THE CONTENT OF THIS FILE WITH YOUR OWN.
-#########################################################################################################################
+version: "3.8"
 
 services:
-  web:
+  app:
     build: .
-    image: chall2025-online-chall
+    container_name: ctf-hack
     ports:
-      - "2025:2025"
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/CTF-HACK
