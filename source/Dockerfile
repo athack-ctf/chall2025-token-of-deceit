@@ -7,7 +7,7 @@ COPY package.json package-lock.json ./
 # only necessary dependencies are installed
 RUN npm install --only=production
 
-COPY . .
+COPY source/ .
 
 # The port
 EXPOSE 3000
