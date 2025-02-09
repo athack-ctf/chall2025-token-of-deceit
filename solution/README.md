@@ -79,7 +79,4 @@
          {"flag":"ATHACKCTF{trust_is_a_vulnerability}"}
 
 **Vulnerability:**
-•	CVE-2022-23529 (jsonwebtoken <=8.5.1): The server fails to verify the JWT's signature, allowing the payload to be manipulated without detection.
-
-
-Ensure that all dependencies required to build or run the solution are provided (e.g., `requirements.txt`) or thoroughly documented.
+•	CVE-2022-23529 (**jsonwebtoken <=8.5.1**): The server fails to verify the JWT's signature, allowing the payload to be manipulated without detection.
