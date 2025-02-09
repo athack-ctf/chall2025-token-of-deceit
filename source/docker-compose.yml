@@ -9,4 +9,4 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - ./source:/CTF-HACK
+      - .:/CTF-HACK
