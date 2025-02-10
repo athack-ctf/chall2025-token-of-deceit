@@ -1,12 +1,9 @@
 version: "3.8"
 
 services:
-  app:
+  token-of-deceit:
     build: .
-    container_name: ctf-hack
+    image: athack-ctf/chall2025-token-of-deceit:latest
+    hostname: token-of-deceit
     ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=production
-    volumes:
-      - .:/CTF-HACK
+      - "2025:2025"

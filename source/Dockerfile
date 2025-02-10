@@ -1,15 +1,17 @@
 FROM node:14-alpine
 
-WORKDIR /CTF-HACK
+RUN adduser -D -h /home/chall chall
 
-COPY package.json package-lock.json ./
+WORKDIR /home/chall/
 
-# only necessary dependencies are installed
+COPY chall .
+
+RUN chown -R chall:chall /home/chall/
+
+USER chall
+
 RUN npm install --only=production
 
-COPY . .
-
-# The port
-EXPOSE 3000
+EXPOSE 2025
 
 CMD ["npm", "start"]
