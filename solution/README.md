@@ -1,4 +1,4 @@
-**HOW TO SOLVE: TOKEN OF DECEIT**
+## HOW TO SOLVE: TOKEN OF DECEIT
 
 1. Sign up
    
@@ -77,6 +77,3 @@
      b. The server will respond with the flag:
    
          {"flag":"ATHACKCTF{trust_is_a_vulnerability}"}
-
-**Vulnerability:**
-•	CVE-2022-23529 (**jsonwebtoken <=8.5.1**): The server fails to verify the JWT's signature, allowing the payload to be manipulated without detection.

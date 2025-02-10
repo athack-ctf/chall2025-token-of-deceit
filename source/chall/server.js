@@ -29,7 +29,7 @@ app.get('/signup', (req, res) => {
 });
 
 
-// Sign-up route (register new users) *** NO HASHING ***
+// Sign-up route (register new users)
 app.post('/signup', (req, res) => {
     const {username, password} = req.body;
 
@@ -43,7 +43,7 @@ app.post('/signup', (req, res) => {
     res.json({message: 'Sign-up successful. Please log in.', redirect: '/'});
 });
 
-// Login route to authenticate user and issue a JWT *** SIGNS JWT WITHOUT ALGORITHM ***
+// Login route to authenticate user and issue a JWT
 app.post('/login', (req, res) => {
     const {username, password} = req.body;
 
@@ -52,7 +52,7 @@ app.post('/login', (req, res) => {
         return res.status(401).json({message: 'Invalid credentials'});
     }
 
-    // Create a JWT token *** NO ALGORITHM ***
+    // Create a JWT token
     const token = jwt.sign(
         {username: user.username, role: user.role},
         JWT_SECRET,
@@ -62,7 +62,7 @@ app.post('/login', (req, res) => {
     res.json({message: 'Login successful', token});
 });
 
-// Route to access admin-only data (protected route) *** PRONE TO PROTOTYPE POLLUTION ***
+// Route to access admin-only data (protected route)
 app.get('/admin', (req, res) => {
     const token = req.headers.authorization?.split(" ")[1];  // Extract JWT from request
 
@@ -73,7 +73,6 @@ app.get('/admin', (req, res) => {
     // VULNERABLE: Decodes JWT WITHOUT verifying signature
     const decoded = jwt.decode(token, {complete: true}).payload;
 
-    // VULNERABLE: Prototype Pollution Exploit Possible
     if (decoded.role !== 'admin') {
         return res.status(403).json({message: 'Access denied'});
     }

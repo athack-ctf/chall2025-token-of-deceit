@@ -1,1 +1,3 @@
-Jester’s defenses are in place, but are they truly unbreakable? Can you figure out how to bypass the system’s defenses and access the restricted resource? The path is through a single token, but only the cleverest will succeed.
+We use JWT for authentication, packing all your user info into the token for secure, session-free logins (pretty awesome, right?).
+
+Once you're in, we decode your token to see who you are — no tricks, no sneaking past us!
