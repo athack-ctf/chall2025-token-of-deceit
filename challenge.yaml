@@ -1,0 +1,20 @@
+name: "Token of Deceit"
+author: "Isabella"
+category: Web
+description: |
+    We use JWT for authentication, packing all your user info into the token for secure, session-free logins (pretty awesome, right?).
+
+    Once you're in, we decode your token to see who you are — no tricks, no sneaking past us!
+    
+value: 0
+
+type: standard
+
+flags:
+  - type: "static"
+    content: "ATHACKCTF{trust_is_a_vulnerability}"
+    data: "case_insensitive"
+
+state: visible
+
+version: "0.1"
