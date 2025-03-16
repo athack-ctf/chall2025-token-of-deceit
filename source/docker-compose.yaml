@@ -1,8 +1,8 @@
+version: '3.8'
 services:
   token-of-deceit:
+    image: athack-ctf/chall2025-token-of-deceit:latest
     build: .
     hostname: token-of-deceit
-    image: athack-ctf/chall2025-token-of-deceit:latest
     ports:
     - 52049:2025
-version: '3.8'
