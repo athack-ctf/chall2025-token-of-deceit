@@ -2,7 +2,7 @@ version: '3.8'
 services:
   token-of-deceit:
     image: athack-ctf/chall2025-token-of-deceit:latest
-    build: .
+    build: ./source
     hostname: token-of-deceit
     ports:
     - 52049:2025
